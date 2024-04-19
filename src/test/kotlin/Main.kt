@@ -3,12 +3,12 @@ package br.com.devsrsouza.svg2compose
 import java.io.File
 
 fun main() {
-    val iconTest = File("raw-icons4")
+    val iconTest = File("lunchAssetSvg")
     val src = File("build/generated-icons").apply { mkdirs() }
 
     Svg2Compose.parse(
-        applicationIconPackage = "br.com.compose.icons",
-        accessorName = "EvaIcons",
+        applicationIconPackage = "xyz.lunchlunch.designsystem.icons",
+        accessorName = "Icons",
         outputSourceDirectory = src,
         vectorsDirectory = iconTest,
         iconNameTransformer = { name, group ->
